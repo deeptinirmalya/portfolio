@@ -1250,7 +1250,7 @@ body.dark .project-item {
 .typing-text {
     font-size: 48px;
     font-weight: bold;
-    white-space: nowrap;
+    white-space: pre;
     overflow: hidden;
     position: relative;
     min-height: 60px;

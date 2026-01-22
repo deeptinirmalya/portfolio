@@ -62,79 +62,26 @@ const animateSkills = () => {
 
 };
 
-// Improved Intersection Observer for skills
+
 const observeSkills = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // Delay animation slightly to ensure proper rendering
             setTimeout(() => {
                 animateSkills();
             }, 100);
-            // Unobserve after animation
             observeSkills.unobserve(entry.target);
         }
     });
 }, {
-    threshold: 0.2, // Trigger when 20% of the element is visible
-    rootMargin: '50px' // Start animation slightly before the element comes into view
+    threshold: 0.2,
+    rootMargin: '50px'
 });
 
-// Observe all skill sections
+
 document.querySelectorAll('.skills').forEach(skillSection => {
     observeSkills.observe(skillSection);
 });
 
-// Re-trigger animations when switching between portrait and landscape
-// window.addEventListener('orientationchange', () => {
-//     setTimeout(() => {
-//         document.querySelectorAll('.skills').forEach(skillSection => {
-//             if (isElementInViewport(skillSection)) {
-//                 animateSkills();
-//             }
-//         });
-//     }, 100);
-// });
-
-// Helper function to check if element is in viewport
-// function isElementInViewport(el) {
-//     const rect = el.getBoundingClientRect();
-//     return (
-//         rect.top >= 0 &&
-//         rect.left >= 0 &&
-//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
-
-
-// Glow Elements Animation Fix
-// const glowElements = document.querySelectorAll('.glow-element');
-// let mouseX = 0, mouseY = 0;
-
-// document.addEventListener('mousemove', (e) => {
-//     mouseX = e.clientX;
-//     mouseY = e.clientY;
-// });
-
-// function animateGlow() {
-//     glowElements.forEach((element, index) => {
-//         const speed = 0.05 + (index * 0.01);
-//         const rect = element.getBoundingClientRect();
-//         const targetX = mouseX - rect.width / 2;
-//         const targetY = mouseY - rect.height / 2;
-
-//         const currentX = parseFloat(element.style.left) || rect.left;
-//         const currentY = parseFloat(element.style.top) || rect.top;
-
-//         const newX = currentX + (targetX - currentX) * speed;
-//         const newY = currentY + (targetY - currentY) * speed;
-
-//         element.style.left = `${newX}px`;
-//         element.style.top = `${newY}px`;
-//     });
-//     requestAnimationFrame(animateGlow);
-// }
-// animateGlow();
 
 particlesJS("particles-js", {
     particles: {
@@ -206,12 +153,11 @@ scrollBtn.addEventListener('click', () => {
 
 
 const texts = [
-    "DEVELOPER.",
-    "C-CODER.",
-    "FRONT-END DEVELOPER.",
-    "PROBLEM SOLVER.",
-    "Critical Thinker"
+    "Python Developer.",
+    "AI/ML  Enthusiasm.",
+    "Critical Thinker."
 ];
+
 
 const typingSpeed = 100;
 const erasingSpeed = 50;
@@ -390,29 +336,31 @@ contactForm?.addEventListener('submit', (event) => {
 });
 
 
-// Close popup when clicking OK
+
 closePopup.addEventListener('click', () => {
     popup.style.display = 'none';
 });
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
-// Disable Right Click & Inspect Element
-// document.addEventListener("contextmenu", function (e) {
-//     e.preventDefault();
-// }, false);
 
-// document.addEventListener("keydown", function (e) {
-//     if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
-//         e.preventDefault();
-//     }
-//     if (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) {
-//         e.preventDefault();
-//     }
-//     if (e.key === "F12") {
-//         e.preventDefault();
-//     }
-// }, false);
+// Disable Right Click & Inspect Element
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+}, false);
+
+document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) {
+        e.preventDefault();
+    }
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+}, false);
+
 function openProject1Modal() {
     const modalContent = `
       <div class="modal">
