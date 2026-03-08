@@ -1,4 +1,4 @@
-# 🌌 Professional Portfolio - Dn Mohanty
+# 🌌 Portfolio - Dn Mohanty
 
 A modern, high-performance personal portfolio website built with a focus on **AI & ML Engineering**. This project showcases a blend of creative design, interactive elements, and robust frontend development practices.
 
