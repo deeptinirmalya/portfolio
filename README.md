@@ -51,7 +51,7 @@ To view the portfolio locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/deeptinirmalya/MyPortfolio-Deployed.git
+   git clone https://github.com/deeptinirmalya/portfolio.git
    ```
 2. **Open the project**:
    Simply open `index.html` in your preferred browser.
